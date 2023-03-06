@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <center><title>Order form</title></center>
+</head>
+<style>
+    .wufoo {
+        font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+    }
+</style>
+<body>
+    <form action="simpleform.html" method="get">
+        <h2>Order Form</h2>
+        <h4>What would you like to buy</h4>
+        <select>
+            <option>Disc</option>
+            <option>DVD</option>
+            <option>Tape</option>
+        </select>
+        <h4>How many would you like to order</h4>
+        <input type="radio" name="rd">1 - 25$<br>
+        <input type="radio" name="rd">2 - 50$<br>
+        <input type="radio" name="rd">3 - 70$ (Discount 5$)<br>
+        <h4>Name <span style="color: red;">*</span></h4>
+        <input type="text" placeholder="First Name" size="15">
+        <input type="text" placeholder="Last Name" size="15"><br>
+        <h4>Email</h4>
+        <input type="text" size="20">
+        <h4>Phone Number</h4>
+        <select name="" id="" aria-placeholder="National Code">
+            <OPTIOn>+84</OPTIOn>
+            <OPTIOn>+1</OPTIOn>
+            <OPTIOn>+234</OPTIOn>
+        </select>
+        <input type="text" size="5"> - <input type="text" size="5"> - <input type="text" size="5"><br>
+        <br>
+        <br>
+        <input type="submit" value="Submit" size="10">
+    </form>
+</body>
+</html>
