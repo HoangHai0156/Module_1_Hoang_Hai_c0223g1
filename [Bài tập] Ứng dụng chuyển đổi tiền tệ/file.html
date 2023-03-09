@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="file.css">
+</head>
+<body>
+    <table width="400px">
+        <thead>
+            <th>Amount</th>
+            <th width="190px">From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <td>
+                <input type="text" size="20" id="input">
+            </td>
+            <td>
+                <select id="currency1">
+                    <option selected>VietNam</option>
+                    <option>USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="currency2">
+                    <option>VietNam</option>
+                    <option selected>USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="submit" onclick="MoneyConvert()">Convert</button>
+            </td>
+        </tbody>
+    </table>
+    <br>
+    <p id="result">Result</p>
+</body>
+</html>
+<script src="file.js"></script>
