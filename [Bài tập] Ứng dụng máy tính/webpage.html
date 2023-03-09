@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="number" id="a" placeholder="Nhập biến a" size="25px">
+            </td>
+            <td>
+                <input type="number" id="b" placeholder="Nhập biến b" size="25px">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="evaluatecong()" type="button" value="+">Cộng(+)</button>
+                <button onclick="evaluatetru()" type="button" value="-">Trừ(-)</button>
+                <button onclick="evaluatenhan()" type="button" value="*">Nhân(x)</button>
+                <button onclick="evaluatechia()" type="button" value="/">Chia(/)</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <div id="res"></div>
+</body>
+</html>
+<script src="script.js"></script>
