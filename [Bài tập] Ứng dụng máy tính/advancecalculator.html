@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input id="numa" type="number" size="25" placeholder="Nhập giá trị a">
+            </td>
+            <td>
+                <select id="select">
+                    <option name="math" value="+">+</option>
+                    <option name="math" value="-">-</option>
+                    <option name="math" value="*">x</option>
+                    <option name="math" value="/">/</option>
+                </select>
+            </td>
+            <td>
+                <input id="numb" type="number" size="25" placeholder="Nhập giá trị b">
+            </td>
+            <td>
+                <button type="button" onclick="calculate()">Submit</button>
+            </td>
+        </tr>
+    </table>
+    <p>Kết quả có được là:</p>
+    <div id="res"></div>
+</body>
+</html>
+<script src="advancedcalculator.js"></script>
