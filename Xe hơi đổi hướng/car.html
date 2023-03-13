@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: none;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <tbody>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button" onclick="carup()">
+                    <img src="uparrow.jpg" alt="uparrow" width="50">
+                </button>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="carleft()">
+                    <img src="leftarrow.jpg" alt="leftarrow" width="50">
+                </button>
+            </td>
+            <td></td>
+            <td>
+                <button type="button" onclick="carright()">
+                    <img src="rightarrow.jpg" alt="rightarrow" width="50">
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button" onclick="cardown()">
+                    <img src="downarrow.jpg" alt="downarrow" width="50">
+                </button>
+            </td>
+            <td></td>
+        </tr>
+    </tbody>
+    </table>
+    <img id="cardirection" src="carright.jpg" alt="car">
+</body>
+<script src="car.js"></script>
+</html>
