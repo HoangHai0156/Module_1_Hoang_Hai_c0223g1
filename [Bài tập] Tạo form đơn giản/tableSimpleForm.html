@@ -5,16 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Form</title>
+    <style>
+        #cap1{
+            background-color: orangered;
+            color: antiquewhite;
+        }
+        #table1>tbody>tr>td:first-child{
+            color: blue;
+        }
+        #table1>tbody>tr:nth-child(3){
+            color: orange;
+        }  
+        #table1>tbody>tr:nth-child(4){
+            color: orange;
+        }  
+        #table1>tbody>tr:nth-child(5){
+            color: orange;
+        }
+        #cap2{
+            text-align: left;
+            background-color: aqua;
+            color: blue;
+        }
+        #table2>tbody>tr>td:first-child{
+            color: blue;
+        }  
+    </style>
 </head>
 <body>
     <form action="" method="post">
-        <table>
-            <thead>
-                <th colspan="4">Sở thích của bạn</th>
-            </thead>
+        <table id="table1">
+            <caption id="cap1">
+                <strong>Sở thích của bạn</strong>
+            </caption>
             <tbody>
                 <tr>
-                    <td align="right"">Họ và tên</td>
+                    <td align="right">Họ và tên</td>
                     <td colspan="2"><input type="text" name="yourname"></td>
                     <td></td>
                 </tr>
@@ -23,6 +49,7 @@
                     <td colspan="2"><input type="text" name="yourname" size="15"></td>
                     <td></td>
                 </tr>
+                <div>
                 <tr>
                     <td align="right">Sở thích</td>
                     <td>
@@ -53,6 +80,7 @@
                         <input type="checkbox" name="hobby">Du lịch
                     </td>
                 </tr>
+                </div>
                 <tr>
                     <td></td>
                     <td>
@@ -66,10 +94,10 @@
         </table>
         <br>
         <br>
-        <table>
-            <thead>
-                <th align="left" colspan="3">ĐĂNG KÝ HỌC VIÊN</th>
-            </thead>
+        <table id="table2">
+            <caption id="cap2">
+                <strong>ĐĂNG KÝ HỌC VIÊN</strong>
+            </caption>
             <tbody>
                 <tr>
                     <td align="left" width="90">Họ và tên</td>

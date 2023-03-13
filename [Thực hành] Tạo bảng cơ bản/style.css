@@ -1,0 +1,15 @@
+*{
+    text-align: left;
+}
+table{
+    border-collapse: collapse;
+}
+table>thead>tr{
+    background-color: lightgray;
+}
+table>tbody>tr:nth-child(even){
+    background-color: lightgray;
+}
+td{
+    border: thick 1px black;
+}
