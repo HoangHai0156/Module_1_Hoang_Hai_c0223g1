@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Ball</title>
+</head>
+
+<body>
+    <img width="10%" id="ballimg"
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" alt="ball">
+    <p>Click button below to move the ball</p>
+    <button onclick="moveright()" type="button">Move Right</button>
+    <button onclick="moveleft()" type="button">Move Left</button>
+</body>
+
+</html>
+<script>
+    let ball = null;
+    ball = document.getElementById("ballimg");
+    function init() {
+        ball = document.getElementById("ballimg");
+        ball.style.position = "relative";
+        ball.style.left = "0px";
+    }
+    function moveright() {
+        ball.style.left = parseInt(ball.style.left) + 10 + "px";
+    }
+    function moveleft() {
+        ball.style.left = parseInt(ball.style.left) - 10 + "px";
+    }
+    window.onload = init;
+</script>
