@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Nobita</title>
+    <style>
+        body{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <img style="position: relative; left: 0px; top: 0px;" id="nobi" width="10%" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" alt="nobitaFig">
+</body>
+<script>
+    function init(){
+        document.addEventListener("keydown",keycombin);
+    }
+    function keycombin(keys){
+        switch (keys.keyCode){
+            case 87:
+                moveup()
+                break;
+            case 83:
+                movedown()
+                break;
+            case 65:
+                moveleft()
+                break;
+            case 68:
+                moveright()
+                break;
+        }
+    }
+    function moveup(){
+        var picNobi = document.getElementById("nobi");
+        picNobi.style.top = parseInt(picNobi.style.top) - 5 + "px";
+    }
+    function movedown(){
+        var picNobi = document.getElementById("nobi");
+        picNobi.style.top = parseInt(picNobi.style.top) + 5 + "px";
+    }
+    function moveleft(){
+        var picNobi = document.getElementById("nobi");
+        picNobi.style.left = parseInt(picNobi.style.left) - 5 + "px";
+    }
+    function moveright(){
+        var picNobi = document.getElementById("nobi");
+        picNobi.style.left = parseInt(picNobi.style.left) + 5 + "px";
+    }
+    window.onload = init;
+</script>
+</html>
