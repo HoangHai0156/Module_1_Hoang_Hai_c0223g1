@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculate</title>
+</head>
+<body>
+   <h1>Kiểm tra chỉ số cân nặng cho cơ thể</h1>
+   <table>
+    <caption>
+        <strong>Vui lòng nhập số liệu phù hợp</strong>
+    </caption>
+    <tbody>
+        <tr>
+            <td>Chiều cao của cơ thể (m)</td>
+            <td>
+                <input value="0" type="number" name="hei" id="height" size="25">
+            </td>
+        </tr>
+        <tr>
+            <td>Cân năng của cơ thể (kg)</td>
+            <td>
+                <input value="0" type="number" name="wei" id="weight" size="25">
+            </td>
+        </tr>
+    </tbody>
+   </table>
+   <button id="res" type="button" onclick="calculate();result()">Kết quả!</button><br>
+   <!-- <div id="res"></div> -->
+</body>
+</html>
+<script src="BMI.js"></script>
