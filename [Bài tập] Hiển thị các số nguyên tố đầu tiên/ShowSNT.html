@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show SNT</title>
+</head>
+
+<body>
+    <script>
+        let N = parseInt(prompt('Nhập số lượng số nguyên tố được phép hiện ra'));
+        var count = 0;
+        var uocCount = 0;
+        for (var i = 2; i <= 1000; i++) {
+            if (N > count) {
+                for (var j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        uocCount += 1;
+                    }
+                }
+                if (uocCount == 2) {
+                    document.write(i + "<br>");
+                    count += 1;
+                }
+                uocCount = 0;
+            } else {
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
