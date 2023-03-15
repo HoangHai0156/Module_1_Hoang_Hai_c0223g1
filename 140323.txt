@@ -5,9 +5,9 @@ Tuần 3 :
 	
 + Tìm hiểu vòng lặp for, while, do/while
 -----------------------------------------for ------------------------------------------
-for (lệnh khowir tạo; dkien lặp; action-after-each-iteration)
+for (lệnh khowir tạo; dkien lặp; lệnh thực thi sau mỗi vòng lặp)
 	{
-	statement(s);
+	cú pháp(s);
 	}
 --------------- luồng thực thi của vòng lặp for--------------------------------------
 1. Các câu lệnh initial-action được thực thi
