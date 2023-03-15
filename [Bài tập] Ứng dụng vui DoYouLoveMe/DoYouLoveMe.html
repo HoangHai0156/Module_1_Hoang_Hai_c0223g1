@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+</head>
+<body>
+    <table width="300px">
+        <caption>
+            <h1>Do you love me?</h1>
+        </caption>
+        <tr>
+            <td align="right">
+                <button type="button" onclick="message()">Yes</button>
+            </td>
+            <td>
+                <button id="no" style="position: relative; left: 0px; top: 0px;" type="button" onmouseover="move()">No</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function message(){
+        alert("<3")
+    }
+    // H794 W919
+    function move(){
+        document.getElementById("no").style.left=(Math.random()*910)+"px";
+        document.getElementById("no").style.top=(Math.random()*600)+"px";
+    }
+</script>
+</html>
