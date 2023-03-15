@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+</head>
+<body>
+    <input id="A" value="" type="text" size="25" placeholder="Nhập tuổi"><br>
+    <button type="button" onclick="run()">Nhập</button>
+</body>
+</html>
+<script>
+    function run(){
+        var a = parseInt(document.getElementById("A").value);
+        if(a >= 15){
+            alert("Đủ tuổi vào lớp 10")
+        }else{
+            alert("Chưa đủ tuổi vào lớp 10")
+        }
+    }
+</script>

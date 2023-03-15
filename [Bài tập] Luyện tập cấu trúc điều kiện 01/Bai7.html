@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 7</title>
+</head>
+
+<body>
+    <input min="0" id="A" value="" type="number" size="25" placeholder="Nhập số phút"><br>
+    <button type="button" onclick="run()">Nhập</button>
+</body>
+
+</html>
+<script>
+    // Phí thuê bao bắt buộc là 25 nghìn.
+    // 600 đồng cho mỗi phút gọi của 50 phút đầu tiên.
+    // 400 đồng cho mỗi phút gọi của 150 phút tiếp theo.
+    // 200 đồng cho bất kỳ phút gọi nào sau 200 phút đầu tiên.
+    function run() {
+        var cost;
+        var a = parseInt(document.getElementById("A").value);
+        if (a < 0) {
+            alert("Số phút không hợp lệ");
+        } else if (a <= 50) {
+            cost = 600 * a;
+        } else if (a <= 200) {
+            cost = 600 * 50 + 400 * (a - 50);
+        } else {
+            cost = 600 * 50 + 400 * 150 + (a - 200) * 200;
+        }
+        let total = 25000 + cost;
+        alert("Phí thuê bao của bạn là " + cost);
+    }
+</script>
