@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 7</title>
+</head>
+<body>
+    <input id="A" value="" type="text" size="25" placeholder="Nhập giá trị a"><br>
+    <input id="B" value="" type="text" size="25" placeholder="Nhập giá trị b"><br>
+    <input id="C" value="" type="text" size="25" placeholder="Nhập giá trị c"><br>
+    <button type="button" onclick="run()">Nhập</button>
+</body>
+</html>
+<script>
+    function run(){
+        var a = parseInt(document.getElementById("A").value);
+        var b = parseInt(document.getElementById("B").value);
+        var c = parseInt(document.getElementById("C").value);
+        var x1, x2;
+        var d = b*b-4*a*c;
+        var dRoot2=Math.sqrt(d);
+        if(d<0){
+            alert("Phương trình vô nghiệm");
+        }else if(d == 0){
+            x1 = -b/(2*a);
+            alert("Phương trình có nghiệm kép x1 = x2 ="+x1)
+        }else{
+            x1 = (-b + dRoot2)/2*a;
+            x2 = (-b - dRoot2)/2*a;
+            alert("Phương trình có nghiệm x1 = "+x1.toFixed(2)+" Phương trình có nghiệm x2 = "+x2.toFixed(2))
+        }
+    }
+</script>
