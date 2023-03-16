@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 6</title>
+    <!-- In hình trái tim -->
+    <style>
+        * {
+            border-collapse: collapse;
+            font-weight: 900;
+            font-size: large;
+            /* border: 1px solid black; */
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var R = 40;
+        var p = -16;
+        var D = 60;
+        var o = 0;
+        var tab = "<table>";
+        for (var i = 1; i <= R; i++) {
+            tab = tab + "<tr>";
+            for (var j = 1; j <= D; j++) {
+                if (i == 1) {
+                    if (j == D / 4 || j == D * 3 / 4) {
+                        tab = tab + "<td>*</td>";
+                    } else {
+                        tab = tab + "<td></td>";
+                    }
+                } else if (i <= D / 4) {
+                    if ((j >= D / 4 - o && j <= D / 4 + o) || (j >= D * 3 / 4 - o && j <= D * 3 / 4 + o)) {
+                        tab = tab + "<td>*</td>";
+                    } else {
+                        tab = tab + "<td></td>";
+                    }
+                } else if (i == D / 4 + 1) {
+                        tab = tab + "<td>*</td>";
+                } else if (i != R) {
+                    if (j >= 1 + p && j <= D - p) {
+                        tab = tab + "<td>*</td>";
+                    } else {
+                        tab = tab + "<td></td>";
+                    }
+                } else {
+                    if (j < D / 2 + 7 && j > D / 2 -7) {
+                        tab = tab + "<td>*</td>";
+                    } else {
+                        tab = tab + "<td></td>";
+                    }
+                }
+            }
+            p++;
+            o++;
+            tab = tab + "</tr>"
+        }
+        // console.log(p);
+        tab = tab + "</table>"
+        document.write(tab)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+    <style>
+        * {
+            font-weight: bold;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var tab = "<table>"
+        for (i = 1; i <= 5; i++) {
+            tab = tab + "<tr>";
+            for (var j = 1; j <= i; j++) {
+                tab = tab + "<td>*</td>";
+            }
+            tab = tab + "</tr>";
+        }
+        tab = tab + "</table>";
+        document.write(tab);
+    </script>
+    <br>
+    <br>
+    <script>
+        var tab2 = "<table>"
+        for (i = 1; i <= 5; i++) {
+            tab2 = tab2 + "<tr>";
+            for (var j = 5; j >= i; j--) {
+                tab2 = tab2 + "<td>*</td>";
+            }
+            tab2 = tab2 + "</tr>";
+        }
+        tab2 = tab2 + "</table>";
+        document.write(tab2);
+    </script>
+    <br>
+    <br>
+    <script>
+        var tab4 = "<table>"
+        for (i = 1; i <= 5; i++) {
+            tab4 = tab4 + "<tr>";
+            for (var j = 5; j >= 1; j--) {
+                if (j <= i) {
+                    tab4 = tab4 + "<td>*</td>";
+                } else {
+                    tab4 = tab4 + "<td></td>";
+                }
+            }
+            tab4 = tab4 + "</tr>";
+        }
+        tab4 = tab4 + "</table>";
+        document.write(tab4);
+    </script>
+    <br>
+    <br>
+    <script>
+        var tab3 = "<table>"
+        for (i = 1; i <= 5; i++) {
+            tab3 = tab3 + "<tr>";
+            for (var j = 1; j <= 5; j++) {
+                if (j >= i) {
+                    tab3 = tab3 + "<td>*</td>";
+                } else {
+                    tab3 = tab3 + "<td></td>";
+                }
+            }
+            tab3 = tab3 + "</tr>";
+        }
+        tab3 = tab3 + "</table>";
+        document.write(tab3);
+    </script>
+</body>
+
+</html>

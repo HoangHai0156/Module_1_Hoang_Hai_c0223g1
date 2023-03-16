@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4</title>
+    <!-- In hình chữ nhật -->
+    <style>
+        * {
+            border-collapse: collapse;
+            font-weight: 900;
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // let R = parent(prompt("Nhập chiều rộng của hình chữ nhật"));
+        let R = 7;
+        // if (R > 0) {
+        //     let D = parent(prompt("Nhập chiều dài của hình chữ nhật"));
+        // }
+        let D = 20;
+        var tab = "<table>";
+        for (var i = 1; i <= R; i++) {
+            tab = tab + "<tr>"
+            for (var j = 1; j <= D; j++) {
+                if (i == 1 || i == R) {
+                    tab = tab + "<td>*</td>";
+                } else if (j == 1 || j == D) {
+                    tab = tab + "<td>*</td>";
+                } else {
+                    tab = tab + "<td></td>";
+                }
+            }
+            tab = tab + "</tr>"
+        }
+        tab = tab + "</table>";
+        document.write(tab);
+    </script>
+</body>
+
+</html>

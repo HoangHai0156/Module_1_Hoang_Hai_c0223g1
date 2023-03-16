@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+</head>
+
+<body>
+    <script>
+        var num = +prompt("Nhập vào số nguyên muốn tính giai thừa");
+        var E = num;
+        if (num < 0) {
+            alert("Số nhập vào không hợp lệ!");
+        } else {
+            for (var i = 1; i < num; i++) {
+                var res = E * i;
+                E = res;
+            }
+            alert("Giai thừa của "+num+" là "+res);
+        }
+    </script>
+</body>
+
+</html>
