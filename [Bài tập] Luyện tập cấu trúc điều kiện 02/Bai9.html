@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 9</title>
+</head>
+
+<body>
+    <input id="A" value="" type="text" size="25" placeholder="Nhập giá trị a"><br>
+    <input id="B" value="" type="text" size="25" placeholder="Nhập giá trị b"><br>
+    <input id="C" value="" type="text" size="25" placeholder="Nhập giá trị c"><br>
+    <button type="button" onclick="run()">Nhập</button>
+</body>
+
+</html>
+<script>
+    function run() {
+        var a = parseInt(document.getElementById("A").value);
+        var b = parseInt(document.getElementById("B").value);
+        var c = parseInt(document.getElementById("C").value);
+        if (a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a) {
+            alert("a, b, c là 3 cạnh của một tam giác")
+        }else{
+            alert("a, b, c không là 3 cạnh của một tam giác")
+        }
+    }
+</script>

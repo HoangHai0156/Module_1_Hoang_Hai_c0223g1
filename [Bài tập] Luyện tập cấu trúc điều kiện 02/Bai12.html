@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 12</title>
+</head>
+<body>
+    <input id="A" value="" type="text" size="25" placeholder="Nhập số tiền vay (triệu đồng)"><br>
+    <input id="B" value="" type="text" size="25" placeholder="Nhập số tháng cho vay"><br>
+    <input id="C" value="" type="text" size="25" placeholder="Nhập lãi xuất hàng tháng"><br>
+    <button type="button" onclick="run()">Nhập</button>
+</body>
+</html>
+<script>
+    function run(){
+        var a = Number(document.getElementById("A").value);
+        var b = parseInt(document.getElementById("B").value);
+        var c = Number(document.getElementById("C").value);
+        var cost;
+        for (i=1; i<=b; i++){
+            cost=c*a;
+            a=a+cost;
+        }
+        var roundCost=cost.toFixed(2);
+        alert("Lãi ngân hàng của bạn là "+roundCost+" triệu đồng")
+    }
+</script>

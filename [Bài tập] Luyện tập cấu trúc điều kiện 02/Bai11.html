@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 11</title>
+</head>
+
+<body>
+    <input id="A" value="" type="text" size="35" placeholder="Nhập vào thu nhập cá nhân (triệu đồng)"><br>
+    <button type="button" onclick="run()">Nhập</button>
+</body>
+<!-- Bậc 1: 4 triệu đồng/tháng 0%;
+Bậc 2: Trên 4 - 6 triệu đồng/tháng: 5%;
+Bậc 3: Trên 6 - 9 triệu đồng: 10%;
+Bậc 4: Trên 9 - 14 triệu đồng/tháng: 15%;
+Bậc 5: trên 14 - 24 triệu đồng/tháng: 20%;
+Bậc 6: Trên 24 - 44 triệu đồng/tháng: 25%;
+Bậc 7: Trên 44 - 84 triệu đồng/tháng: 30%;
+Bậc 8: Trên 84 triệu đồng: 35%. -->
+</html>
+<script>
+    function run() {
+        var a = parseInt(document.getElementById("A").value);
+        var cost;
+        if (a > 0 && a <= 4) {
+            cost=0;
+        } else if(a>4&&a<=6){
+            cost=a*5/100;
+        }else if(a>6&&a<=9){
+            cost=a*10/100;
+        }else if(a>9&&a<=14){
+            cost=a*15/100;
+        }else if(a>14&&a<=24){
+            cost=a*20/100;
+        }else if(a>24&&a<=44){
+            cost=a*25/100;
+        }else if(a>44&&a<=84){
+            cost=a*30/100;
+        }else if(a>84){
+            cost=a*35/100;
+        }else{
+            alert("Số nhập vào không hợp lệ");
+        }
+        alert("Thuế thu nhập cá nhân là "+cost+" triệu đồng");
+    }
+</script>

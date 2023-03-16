@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 10</title>
+</head>
+
+<body>
+    <input id="A" value="" type="text" size="25" placeholder="Nhập số kwh"><br>
+    <button type="button" onclick="run()">Nhập</button>
+</body>
+<!-- Viết chương trình tính tiền điện 
+    Biết rằng 100 kWh đầu giá 1000, từ kWh 101 – 150 giá 1200, từ kWh 151 – 200 giá 2000, từ 201 trở lên giá 2500. -->
+
+</html>
+<script>
+    function run() {
+        var a = parseInt(document.getElementById("A").value);
+        var cost;
+        if (a > 0 && a <= 100) {
+            cost = 1000 * a;
+        } else if (a > 100 && a <= 150) {
+            cost = 1000 * 100 + (a - 100) * 1200;
+        } else if (a > 150 && a <= 200) {
+            cost = 1000 * 100 + 1200 * 50 + (a - 150) * 2000;
+        } else if (a > 200) {
+            cost = 1000 * 100 + 1200 * 50 + 50 * 2000 + (a - 200) * 2500;
+        } else {
+            alert("Số kwh không hợp lệ")
+        }
+        alert("Giá tiền điện là " + cost)
+    }
+</script>
