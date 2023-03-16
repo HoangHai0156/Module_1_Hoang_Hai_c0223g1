@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 8</title>
+</head>
+
+<body>
+    <button id="btn" onclick="play()">
+        Chơi
+    </button>
+</body>
+
+</html>
+<script>
+    function play() {
+        let Num = +prompt("Bạn muốn đoán trong khoảng nào");
+        var range = parseInt(Math.random() * Num);
+        console.log(range);
+        let guess = +prompt("Đoán số lớn nhất mà ứng dụng đã chọn");
+        if (guess == range) {
+            document.getElementById("btn").innerHTML = "Chúc mừng bạn đã đoán đúng !";
+        } else {
+            for (var i = 1; i < 3; i++) {
+                guess = +prompt("Sai rồi! Hãy đoán lại số lớn nhất mà ứng dụng đã chọn");
+                if(guess == range){
+                    document.getElementById("btn").innerHTML = "Chúc mừng bạn đã đoán đúng !";
+                }
+            }
+            document.getElementById("btn").innerHTML = "Bạn đã đoán sai, và hết lượt đoán!";
+        }
+    }
+</script>

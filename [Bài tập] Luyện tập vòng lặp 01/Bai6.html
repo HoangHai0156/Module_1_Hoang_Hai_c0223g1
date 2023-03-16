@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 6</title>
+    <!-- Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên. -->
+</head>
+
+<body>
+    <script>
+        var N = 30;
+        var count = 0;
+        var sum = 0;
+        for (i = 1; i <= 1000; i++) {
+            if (count < N) {
+                if (i % 7 == 0) {
+                    sum = sum + i;
+                    count = count + 1;
+                }
+            }else{
+                break;
+            }
+        }
+        document.write(sum);
+    </script>
+</body>
+
+</html>
