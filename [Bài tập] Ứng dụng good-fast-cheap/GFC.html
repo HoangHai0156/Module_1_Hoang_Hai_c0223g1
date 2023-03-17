@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Fast Cheap exist?</title>
+    <style>
+        table {
+            width: 200px;
+            margin: 10px auto;
+        }
+
+        table>tbody>tr>td>img {
+            width: 100%;
+            border-radius: 40%;
+        }
+
+        table>tbody>tr>td>img:hover {
+            cursor: pointer;
+            box-shadow: 3px 3px 3px green;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Good</td>
+                <td>
+                    <img id="Turn1" onclick="combin(1)" src="off.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>Fast</td>
+                <td>
+                    <img id="Turn2" onclick="combin(2)" src="off.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>Cheap</td>
+                <td>
+                    <img id="Turn3" onclick="combin(3)" src="off.png" alt="">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<script>
+    function combin(row) {
+        var inMage = document.querySelector(`#Turn${row}`);
+        var rnd = Math.ceil(Math.random() * 3);
+        console.log(rnd);
+        console.log(inMage.src);
+        console.log(row);
+        while(row == rnd){
+            rnd = Math.ceil(Math.random() * 3);
+        }
+        if (inMage.src == "http://127.0.0.1:5500/off.png") {
+            inMage.src = "http://127.0.0.1:5500/on.png"
+        } else {
+            inMage.src = "http://127.0.0.1:5500/off.png"
+        }
+        console.log(document.querySelector(`#Turn${rnd}`).src);
+        if (document.querySelector(`#Turn3`).src == document.querySelector(`#Turn1`).src && document.querySelector(`#Turn3`).src == document.querySelector(`#Turn2`).src) {
+            document.querySelector(`#Turn${rnd}`).src = "http://127.0.0.1:5500/off.png"
+        }
+    }
+</script>
+
+</html>
