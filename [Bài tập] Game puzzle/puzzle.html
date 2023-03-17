@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Puzzle</title>
+    <style>
+        table {
+            width: 700px;
+            margin: 0px auto;
+        }
+
+        table>tbody>tr>td:hover {
+            cursor: pointer;
+            box-shadow: 5px 5px 5px yellowgreen;
+        }
+
+        table>tbody>tr>td>img {
+            width: 100%;
+            height: 130px;
+        }
+
+        .winGlow {
+            box-shadow: 5px 5px 5px 0px orangered;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <img id="img1" onclick="change(1)" src="1x1.jpg" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="img2" onclick="change(2)" src="2x2.jpg" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="img3" onclick="change(3)" src="3x3.jpg" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="img4" onclick="change(4)" src="2x4.jpg" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img id="img5" onclick="change(5)" src="1x5.jpg" alt="">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<!-- http://127.0.0.1:5500/1x5.jpg -->
+<script>
+    var rnd;
+    var recent = 1;
+    var check1 = "http://127.0.0.1:5500/1x1.jpghttp://127.0.0.1:5500/1x2.jpghttp://127.0.0.1:5500/1x3.jpghttp://127.0.0.1:5500/1x4.jpghttp://127.0.0.1:5500/1x5.jpg"
+    var check2 = "http://127.0.0.1:5500/2x1.jpghttp://127.0.0.1:5500/2x2.jpghttp://127.0.0.1:5500/2x3.jpghttp://127.0.0.1:5500/2x4.jpghttp://127.0.0.1:5500/2x5.jpg"
+    var check3 = "http://127.0.0.1:5500/3x1.jpghttp://127.0.0.1:5500/3x2.jpghttp://127.0.0.1:5500/3x3.jpghttp://127.0.0.1:5500/3x4.jpghttp://127.0.0.1:5500/3x5.jpg"
+    function change(row) {
+        do {
+            rnd = Math.ceil(Math.random() * 3);
+        }
+        while (rnd == recent);
+        console.log(rnd);
+        recent = rnd;
+        var image = document.querySelector(`#img${row}`);
+        image.src = `${rnd}x${row}.jpg`;
+        console.log(checkFinal);
+        var checkFinal = `${document.querySelector("#img1").src}${document.querySelector("#img2").src}${document.querySelector("#img3").src}${document.querySelector("#img4").src}${document.querySelector("#img5").src}`
+        if (checkFinal == check1 || checkFinal == check2 || checkFinal == check3) {
+            document.querySelector('#img1').classList.add("winGlow")
+            document.querySelector('#img2').classList.add("winGlow")
+            document.querySelector('#img3').classList.add("winGlow")
+            document.querySelector('#img4').classList.add("winGlow")
+            document.querySelector('#img5').classList.add("winGlow")
+        } else {
+            document.querySelector('#img1').classList.remove("winGlow")
+            document.querySelector('#img2').classList.remove("winGlow")
+            document.querySelector('#img3').classList.remove("winGlow")
+            document.querySelector('#img4').classList.remove("winGlow")
+            document.querySelector('#img5').classList.remove("winGlow")
+        }
+    }
+</script>
+
+</html>
