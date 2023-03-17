@@ -19,7 +19,7 @@
 
 <body>
     <script>
-        var R = 40;
+        var R = 48;
         var p = -16;
         var D = 60;
         var o = 0;
@@ -27,12 +27,8 @@
         for (var i = 1; i <= R; i++) {
             tab = tab + "<tr>";
             for (var j = 1; j <= D; j++) {
-                if (i == 1) {
-                    if (j == D / 4 || j == D * 3 / 4) {
-                        tab = tab + "<td>*</td>";
-                    } else {
-                        tab = tab + "<td></td>";
-                    }
+                if (i <= 3) {
+                    tab = tab + "<td></td>";
                 } else if (i <= D / 4) {
                     if ((j >= D / 4 - o && j <= D / 4 + o) || (j >= D * 3 / 4 - o && j <= D * 3 / 4 + o)) {
                         tab = tab + "<td>*</td>";
@@ -40,7 +36,7 @@
                         tab = tab + "<td></td>";
                     }
                 } else if (i == D / 4 + 1) {
-                        tab = tab + "<td>*</td>";
+                    tab = tab + "<td>*</td>";
                 } else if (i != R) {
                     if (j >= 1 + p && j <= D - p) {
                         tab = tab + "<td>*</td>";
@@ -48,11 +44,7 @@
                         tab = tab + "<td></td>";
                     }
                 } else {
-                    if (j < D / 2 + 7 && j > D / 2 -7) {
-                        tab = tab + "<td>*</td>";
-                    } else {
-                        tab = tab + "<td></td>";
-                    }
+                    tab = tab + "<td></td>";
                 }
             }
             p++;
