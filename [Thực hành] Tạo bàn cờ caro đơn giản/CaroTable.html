@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caro Table</title>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <h2>Caro Game Sample</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td id="caro"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="change()">Change Value</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script>
+    let arr = [];
+    for (var i = 0; i < 5; i++) {
+        arr[i] = [0, 0, 0, 0, 0];
+    }
+    for (var i = 0; i < 5; i++) {
+        document.getElementById("caro").innerHTML += "<br>"
+        for (var j = 0; j < 5; j++) {
+            document.getElementById("caro").innerHTML += `${arr[i][j]}  `;
+        }
+    }
+    function change() {
+        let row = +prompt("Nhập dòng của vị trí muốn đổi");
+        let column = +prompt("Nhập cột của vị trí muốn đổi");
+        arr[row-1][column-1] = "x";
+        document.getElementById("caro").innerHTML = '';
+        for (var i = 0; i < 5; i++) {
+            document.getElementById("caro").innerHTML += "<br>"
+            for (var j = 0; j < 5; j++) {
+                document.getElementById("caro").innerHTML += `${arr[i][j]}  `;
+            }
+        }
+    }
+</script>
