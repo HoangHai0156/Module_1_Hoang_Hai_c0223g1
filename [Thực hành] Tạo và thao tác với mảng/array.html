@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Pop Display</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <caption>
+                <h1 align="left" style="font-style: italic;">
+                    Sample Screen:
+                </h1>
+            </caption>
+            <tr>
+                <td>
+                    <input id="box" value="" type="number" size="25">
+                </td>
+                <td>
+                    <button type="button" onclick="add()">Add</button>
+                </td>
+                <td>
+                    <button type="button" onclick="display()">Display</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <hr>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="display"></div>
+</body>
+</html>
+<script>
+    let arr = [];
+    var show = '';
+    function add(){
+        var val = +document.getElementById("box").value;
+        arr.push(val);
+        console.log(arr);
+        document.getElementById("box").value = '';
+    }
+    function display(){
+        for (i = 0; i < arr.length; i++){
+            show = `${show} Element ${i} = ${arr[i]} <br>`;
+        }
+        document.getElementById("display").innerHTML = show;
+    }
+</script>
