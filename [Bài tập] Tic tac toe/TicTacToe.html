@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <p>
+    <h3>Tic Tac Toe</h3>
+    </p>
+    <div id="tab"></div>
+    <br>
+    <button onclick="mark()">Đánh</button>
+    <table style="position: fixed; top: 0; right: 10px;" border="1">
+        <tbody>
+            <th>
+                <p id="round"></p>
+            </th>
+        </tbody>
+    </table>
+</body>
+
+</html>
+<script>
+    let tabArr = [];
+    let showTab = '';
+    var round = 1;
+    for (i = 0; i < 5; i++) {
+        tabArr[i] = ['_', '_', '_', '_', '_'];
+    }
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            showTab += `${tabArr[i][j]} `;
+        }
+        showTab += "<br>"
+    }
+    document.getElementById('tab').innerHTML = showTab;
+    document.getElementById('round').innerText = `Lượt đánh thứ ${round}`;
+    function mark() {
+        var row = +prompt("Nhập dòng muốn đánh");
+        var collumn = +prompt("Nhập cột muốn đánh");
+        if (round % 2 != 0) {
+            tabArr[row][collumn] = "x";
+        } else {
+            tabArr[row][collumn] = "o";
+        }
+        showTab = '';
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 5; j++) {
+                showTab += `${tabArr[i][j]} `;
+            }
+            showTab += "<br>"
+        }
+        document.getElementById('tab').innerHTML = showTab;
+        round++;
+        document.getElementById('round').innerText = `Lượt đánh thứ ${round}`;
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 5; j++) {
+                if (
+                    (tabArr[i][j] == "x" && tabArr[i][j + 1] == "x" && tabArr[i][j + 2] == "x") ||
+                    (tabArr[i][j] == "x" && tabArr[i + 1][j + 2] == "x" && tabArr[i + 2][j] == "x") ||
+                    (tabArr[i][j] == "x" && tabArr[i + 1][j + 1] == "x" && tabArr[i + 2][j + 2] == "x") ||
+                    (tabArr[i][j] == "x" && tabArr[i + 1][j - 1] == "x" && tabArr[i + 2][j - 2] == "x")
+                ) {
+                    alert(`x thắng ở lượt đánh ${round-1}!`);
+                } else if (
+                    (tabArr[i][j] == "o" && tabArr[i][j + 1] == "o" && tabArr[i][j + 2] == "o") ||
+                    (tabArr[i][j] == "o" && tabArr[i + 1][j + 2] == "o" && tabArr[i + 2][j] == "o") ||
+                    (tabArr[i][j] == "o" && tabArr[i + 1][j + 1] == "o" && tabArr[i + 2][j + 2] == "o") ||
+                    (tabArr[i][j] == "o" && tabArr[i + 1][j - 1] == "o" && tabArr[i + 2][j - 2] == "o")
+                ) {
+                    alert(`o thắng ở lượt đánh ${round-1}!`);
+                }
+            }
+        }
+    }
+</script>
