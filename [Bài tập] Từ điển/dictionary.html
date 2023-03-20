@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+</head>
+<body>
+    Nhập Từ :
+    <input id="insert" type="text" value="" size="25">
+    <button onclick="trans()">Dịch</button>
+    <div id="res"></div>
+</body>
+</html>
+<script>
+    let Earr = ['attention','banana','dog','concentration','declaration'];
+    let Varr = ['sự chú ý','quả chuối','con chó','sự tập trung','nhận định'];
+    var result = '';
+    function trans(){
+        var word = document.getElementById("insert").value;
+        for (var i = 0; i < Earr.length; i++){
+            if (word == Earr[i]){
+                result = Varr[i];
+            }
+        }
+        document.getElementById('res').innerHTML = result;
+    }
+</script>
