@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <h3>Type Slowly</h3>
+    <textarea onkeydown="writedown()" id="textes" cols="30" rows="10"></textarea>
+</body>
+
+</html>
+<script>
+    var a = ['C', 'o', 'd', 'e', 'G', 'y', 'm', ' ', 'f', 'o', 'r', ' ', 'l', 'i', 'f', 'e', '!'];
+    var n = '';
+    function writedown() {
+        var t = document.getElementById("textes").value;
+        var j = t.length;
+        if (j > 0) {
+            for (var i = 0; i <= j; i++) {
+                n = n + a[i];
+                if (i == 22) {
+                    document.f.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.getElementById("textes").value = n;
+        n="";
+        // setTimeout("writedown()", 1);
+    }
+</script>

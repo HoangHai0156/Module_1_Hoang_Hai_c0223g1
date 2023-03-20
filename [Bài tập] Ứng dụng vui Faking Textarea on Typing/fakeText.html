@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Text</title>
+</head>
+
+<body align="center">
+    <h3>Type Slowly</h3>
+    <textarea onkeydown="writedown()" id="textes" cols="30" rows="10"></textarea>
+</body>
+
+</html>
+<script>
+    let Fraud = ['C', 'o', 'd', 'e', 'G', 'y', 'm', ' ', 'f', 'o', 'r', ' ', 'l', 'i', 'f', 'e', '!'];
+    let output = '';
+    function writedown() {
+        real = document.getElementById("textes").value;
+        document.getElementById("textes").value = '';
+        for (i = 0; i <= real.length; i++) {
+            document.getElementById("textes").innerHTML = '';
+            output = output + Fraud[i];
+            if (i == Fraud.length){
+                output = '';
+                document.getElementById("textes").value = '';
+            }
+        }
+        document.getElementById("textes").value = output;
+        output ='';
+    }
+
+</script>

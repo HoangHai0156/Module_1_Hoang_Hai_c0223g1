@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4</title>
+</head>
+<body>
+    <input value="" id="nums" type="text" size="25">
+    <button onclick="insert()">Nhập</button>
+    <button onclick="change()">Đảo ngược</button>
+    <div id="arr"></div>
+    <div id="ChangeArr"></div>
+</body>
+</html>
+<script>
+    var arr = [];
+    function insert(){
+        var x = document.getElementById("nums").value;
+        arr.push(x);
+        document.getElementById("arr").innerHTML = `Mảng hiện tại là [${arr}]`;
+        document.getElementById("nums").value="";
+    }
+    function change(){
+        var ReArr = arr.reverse();
+        document.getElementById("ChangeArr").innerHTML = `Mảng đảo ngược của hiện tại là [${ReArr}]`;
+    }
+</script>

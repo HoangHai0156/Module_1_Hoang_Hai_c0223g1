@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 6</title>
+</head>
+<body>
+    <script>
+        var a = [4,56,9,8,12,23,10,2,80,0];
+        let v = prompt("Nhập vào một số");
+        var count = 0;
+        for (i = 0; i < a.length; i++){
+            if(v == a[i]){
+                count = 1;
+            }
+        }
+        if(count == 0){
+            alert(`${v} không là một số thuộc mảng`);
+        }else{
+            alert(`${v} là một số thuộc mảng`);
+        }
+    </script>
+</body>
+</html>
