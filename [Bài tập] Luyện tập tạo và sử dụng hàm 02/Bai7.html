@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 7</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+</body>
+</html>
+<script>
+    let num1 = +prompt("Nhập vào một số a");
+    let num2 = +prompt("Nhập vào một số b");
+    alert(`Số a là ${num1}, số b là ${num2}`);
+    function swap(a,b){
+        let temp = a;
+        a = b;
+        b = temp;
+        alert(`Số a là ${a}, số b là ${b}`);
+    }
+    swap(num1,num2);
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 9</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = ['h','&','1','h','9','~','0',' ','h','12','h','#'];
+    let a = prompt("Nhập vào một ký tự bất kỳ!");
+    function IndexOf(array,key){
+        let count = -1;
+        for(var i=0;i<array.length;i++){
+            if(key == array[i]){
+                count++;
+            }
+        }
+        if(count == -1){
+            document.write(count);
+        }else{
+            document.write(`Ký tự ${a} xuất hiện ${count+1} lần`)
+        }
+    }
+    IndexOf(arr,a);
+</script>

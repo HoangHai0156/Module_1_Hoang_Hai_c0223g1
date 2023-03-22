@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+</body>
+</html>
+<script>
+    let num = +prompt("Nhập vào bán kính hình tròn");
+    function calculate(r){
+        let C = 2*r*Math.PI;
+        let S = Math.PI*r*r;
+        document.getElementById("p1").innerHTML = `Chu vi hình tròn là ${C.toFixed(2)}`;
+        document.getElementById("p2").innerHTML = `Diện tích hình tròn là ${S.toFixed(2)}`;
+    }
+    calculate(num);
+</script>

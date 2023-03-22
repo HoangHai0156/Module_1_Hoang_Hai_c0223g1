@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 8</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+</body>
+
+</html>
+<script>
+    let arr = new Array(10);
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = Math.ceil(Math.random() * 100);
+    }
+    document.getElementById("p1").innerText = `Mảng đầu: [${arr}]`;
+    function reVerse(a) {
+        for (var i = 0; i < a.length / 2; i++) {
+            let temp = a[i];
+            a[i] = a[a.length - i - 1];
+            a[a.length - i - 1] = temp;
+        }
+        document.getElementById("p2").innerText = `Mảng đảo ngược: [${a}]`;
+    }
+    reVerse(arr);
+</script>

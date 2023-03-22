@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let key = +prompt("Nhập vào một ký tự bất kì!");
+    let nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    function isNumber(a) {
+        let index = nums.indexOf(a);
+        if (index == -1){
+            alert("Giá trị nhập vào không phải là MỘT ký tự số");
+        }else{
+            alert(`${a} là một ký tự số!`);
+        }
+    }
+    isNumber(key);
+</script>
