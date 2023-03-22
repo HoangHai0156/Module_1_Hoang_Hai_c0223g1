@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let arrayA = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+    let arrayB = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let value = prompt("Input a name of a star");
+    function looking(name){
+        let index = arrayA.indexOf(name);
+        if(index == -1){
+            document.write("The name is invalid");
+        }else{
+            parallel = arrayB[index];
+            document.write(parallel);
+        }
+    }
+    looking(value);
+</script>
