@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi giữ Foot và Meter</title>
+</head>
+<body>
+    <h1>Chương trình chuyển đổi giữa Foot và Meter!</h1>
+    <div>
+        Nhập một số:
+        <input id="numBox" type="number" size="25">
+    </div>
+    <br>
+    <div>
+        <button onclick="toMeter()">Foot to Meter</button>
+        <span id="resMeter"></span>
+    </div>
+    <br>
+    <div>
+        <button onclick="toFoot()">Meter to Foot</button>
+        <span id="resFoot"></span>
+    </div>
+</body>
+</html>
+<script>
+    let a = document.getElementById("numBox");
+    function toMeter(){
+        let num = a.value;
+        function Cal1(ft){
+            return ft*0.305;
+        }
+        document.getElementById("resMeter").innerText = `${num} Foot is ${Cal1(num)} Meter`;
+    }
+    function toFoot(){
+        let num = a.value;
+        function Cal2(mt){
+            return mt*3.279;
+        }
+        document.getElementById("resFoot").innerText = `${num} Meter is ${Cal2(num)} Foot`;
+    }
+</script>
