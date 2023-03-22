@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I S P R I M E</title>
+</head>
+
+<body>
+    <script>
+        let num = +prompt("Nhập đi, let me check!");
+        function isPrime(a) {
+            let count = 0;
+            for (i = 1; i < a; i++) {
+                if (a % i == 0) {
+                    count++
+                }
+            }
+            if(count == 1){
+                alert(`${a} là số nguyên tố!`);
+            }else{
+                alert(`${a} không là số nguyên tố!`)
+            }
+        }
+        isPrime(num);
+    </script>
+</body>
+
+</html>
