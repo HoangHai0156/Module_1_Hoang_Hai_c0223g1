@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faking</title>
+</head>
+
+<body align="center">
+    <h2>Type Anything Slowly</h2>
+    <textarea onkeydown="fakingText()" id="textes" cols="50" rows="10"></textarea>
+</body>
+
+</html>
+<script>
+    let arr = ['C', 'o', 'd', 'e', 'G', 'y', 'm', ' ', 'f', 'o', 'r', ' ', 'l', 'i', 'f', 'e', '!']
+    let count = 0;
+    let disPlay = "";
+    function fakingText() {
+        setTimeout(function () {
+            if (count == arr.length) {
+                disPlay = "";
+                count = 0;
+                document.getElementById("textes").value = "";
+            } else {
+                disPlay += arr[count];
+                document.getElementById("textes").value = disPlay;
+                count++;
+            }
+        }, 1);
+    }
+</script>

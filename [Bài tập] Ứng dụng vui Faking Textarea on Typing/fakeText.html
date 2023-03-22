@@ -18,18 +18,20 @@
     let Fraud = ['C', 'o', 'd', 'e', 'G', 'y', 'm', ' ', 'f', 'o', 'r', ' ', 'l', 'i', 'f', 'e', '!'];
     let output = '';
     function writedown() {
-        real = document.getElementById("textes").value;
-        document.getElementById("textes").value = '';
-        for (i = 0; i <= real.length; i++) {
-            document.getElementById("textes").innerHTML = '';
-            output = output + Fraud[i];
-            if (i == Fraud.length){
-                output = '';
-                document.getElementById("textes").value = '';
+        setTimeout(function () {
+            real = document.getElementById("textes").value;
+            document.getElementById("textes").value = '';
+            for (i = 0; i <= real.length; i++) {
+                document.getElementById("textes").innerHTML = '';
+                output = output + Fraud[i];
+                if (i == Fraud.length) {
+                    output = '';
+                    document.getElementById("textes").value = '';
+                }
             }
-        }
-        document.getElementById("textes").value = output;
-        output ='';
+            document.getElementById("textes").value = output;
+            output = '';
+        }, 1)
     }
 
 </script>
