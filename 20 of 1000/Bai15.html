@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 15</title>
+    <!-- Bài 15: Kiểm tra một cột ma trận có giảm dần hay không -->
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let matrixA = [];
+    function collumnDescending(matrix) {
+        let rowMax = matrix[0];
+        for (var i = 1; i < matrix.length; i++) {
+            if (rowMax < matrix[i]) {
+                rowMax = matrix[i];
+            }
+        }
+        for (var collumn = 0; collumn < rowMax.length; collumn++) {
+            let flag = 0;
+            for (var row = 1; row < matrix.length; row++) {
+                if (matrix[row][collumn] > matrix[row - 1][collumn]) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                console.log(`Ma trận tại cột ${collumn} có thứ tự giảm dần!`);
+            } else {
+                console.log(`Ma trận tại cột ${collumn} không có thứ tự giảm dần!`);
+            }
+        }
+    }
+    var numbers = [];
+    numbers.push([52, 12, 17, 09, 03]);
+    numbers.push([13, 04, 08, 14, 01]);
+    numbers.push([09, 06, 03, 07, 21]);
+    console.log(numbers);
+    collumnDescending(numbers);
+</script>

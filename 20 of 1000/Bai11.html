@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 11</title>
+    <!-- Bài 11: Kiểm tra mảng có đối xứng không? Có trả về 1, không có trả về 0 -->
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = new Array(10);
+    for (i = 0; i < arr.length; i++) {
+        arr[i] = Math.ceil(Math.random() * (-20) + Math.random() * 30);
+    }
+    console.log(arr);
+    function arrParallel(array){
+        let count = 1;
+        for(var i =0;i<array.length/2;i++){
+            if(array[i] != array[array.length-1-i]){
+                count = 0;
+                break;
+            }
+        }
+        return count;
+    }
+    let arr2 = [1,2,3,4,4,3,2,1];
+    console.log(arrParallel(arr2));
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 16</title>
+    <!-- Bài 16: Kiểm tra ma trận có tồn tại số lẻ hay không -->
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function isEvenInMatrix(matrix) {
+        let isEven = false;
+        for (var row = 0; row < matrix.length; row++) {
+            for (var collumn = 0; collumn < matrix[row].length; collumn++) {
+                if (matrix[row][collumn] % 2 != 0) {
+                    isEven = true;
+                    break;
+                }
+            }
+        }
+        return isEven;
+    }
+    var numbers = [];
+    numbers.push([52, 12, 17, 09, 03]);
+    numbers.push([13, 04, 08, 14, 01]);
+    numbers.push([09, 06, 03, 07, 21]);
+    let arr2Side = new Array(5).fill(new Array(4));
+    for (var i = 0; i < arr2Side.length; i++) {
+        for (var j = 0; j < arr2Side[i].length; j++) {
+            arr2Side[i][j] = (Math.ceil(Math.random() * 30))*2;
+        }
+    }
+    console.log(arr2Side);
+    console.log(isEvenInMatrix(arr2Side));
+</script>

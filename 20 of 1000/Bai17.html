@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 17</title>
+    <!-- Bài 17: Liệt kê các dòng giảm dần trong ma trận -->
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function rowDescending(matrix){
+        for(var row =0; row<matrix.length;row++){
+            let isDescend = true;
+            for(var collumn = 1; collumn<matrix[row].length;collumn++){
+                if(matrix[row][collumn] > matrix[row][collumn-1]){
+                    isDescend = false;
+                    break;
+                }
+            }
+            if(isDescend){
+                console.log(`Dòng ${row} giảm dần`);
+            }
+        }
+    }
+    var numbers = [];
+    numbers.push([52, 19, 17, 09, 03]);
+    numbers.push([13, 04, 08, 14, 01]);
+    numbers.push([09, 06, 03, 07, 21]);
+    console.log(numbers);
+    console.log(rowDescending(numbers));
+</script>

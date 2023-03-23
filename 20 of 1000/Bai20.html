@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 20</title>
+    <!-- Bài 20: Liệt kê các dòng có tổng lớn nhất -->
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function maxSumRow(matrix){
+        let sumArr = [];
+        for(var row = 0; row<matrix.length;row++){
+            let sum=0;
+            for(var collumn = 0 ;collumn<matrix[row].length;collumn++){
+                sum+= matrix[row][collumn];
+            }
+            sumArr.push(sum);
+        }
+        let sumMax = sumArr[0];
+        let index = 0;
+        for(var i=1;i<sumArr.length;i++){
+            if(sumMax<sumArr[i]){
+                sumMax = sumArr[i];
+                index = i;
+            }
+        }
+        console.log(`Dòng có tổng lớn nhất là ${index} với tổng ${sumMax}`);
+    }
+    var numbers = [];
+    numbers.push([53, 12, 17, 09, 03]);
+    numbers.push([13, 04, 08, 14, 01]);
+    numbers.push([99, 06, 03, 07, 21]);
+    console.log(numbers);
+    console.log(maxSumRow(numbers));
+</script>

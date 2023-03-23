@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 14</title>
+    <!-- Bài 14:  Kiểm tra ma trận 2 chiều có toàn dương hay không -->
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let arr2Side = new Array(5).fill(new Array(4));
+    for (var i = 0; i < arr2Side.length; i++) {
+        for (var j = 0; j < arr2Side[i].length; j++) {
+            arr2Side[i][j] = Math.ceil(Math.random() * 30);
+        }
+    }
+    var sidesArray = new Array(4).fill(new Array(6));
+    for (var row = 0; row < sidesArray.length; row++) {
+        for (var column = 0; column < sidesArray[row].length; column++) {
+            sidesArray[row][column] = Math.floor((Math.random() * 100) + 1);
+        }
+    }
+    function isAllNegav(matrix) {
+        let allNega = true;
+        for (var i = 0; i < matrix.length; i++) {
+            for (var j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] < 0) {
+                    allNega = false;
+                }
+            }
+        }
+        return allNega;
+    }
+    console.log(sidesArray);
+    console.log(isAllNegav(sidesArray));
+</script>

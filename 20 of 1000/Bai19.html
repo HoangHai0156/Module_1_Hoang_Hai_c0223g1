@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 19</title>
+    <!-- Bài 19: Tìm số chẵn lớn nhất trong ma trận -->
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function biggestEven(matrix) {
+        let evenArr=[];
+        for (var row = 0; row < matrix.length; row++) {
+            for (var collumn = 0; collumn < matrix[row].length; collumn++) {
+                if (matrix[row][collumn] % 2 == 0) {
+                    evenArr.push(matrix[row][collumn]);
+                }
+            }
+        }
+        console.log(evenArr);
+        let evenMax = evenArr[0];
+        for (var i = 1; i < evenArr.length; i++) {
+            if (evenMax < evenArr[i]) {
+                evenMax = evenArr[i];
+            }
+        }
+        return evenMax;
+    }
+    var numbers = [];
+    numbers.push([53, 12, 17, 09, 03]);
+    numbers.push([13, 04, 08, 14, 01]);
+    numbers.push([09, 06, 03, 07, 21]);
+    console.log(numbers);
+    console.log(biggestEven(numbers));
+</script>
