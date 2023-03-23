@@ -1,0 +1,23 @@
+button{
+    background-color: limegreen;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+}
+button:hover{
+    cursor: pointer;
+}
+input{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+}
+table.tab1 {
+    padding: 10px 20px 8px 15px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+}
