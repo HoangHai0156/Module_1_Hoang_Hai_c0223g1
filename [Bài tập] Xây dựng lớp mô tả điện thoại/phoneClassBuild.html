@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Phone Class</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let mobileMold = function (battery) {
+        this.battery = battery;
+        this.typingMess = [];
+        this.arrivedMess = [];
+        this.sentMess = [];
+        this.status = "on";
+        this.getStatus = function () {
+            return this.status;
+        }
+        this.setStatus = function (status) {
+            this.status = status;
+        }
+        this.chargeMobile = function () {
+                for (var i = this.battery; i < 100; i++) {
+                    this.battery++;
+                }
+                return this.battery;
+        }
+        this.typeMessage = function (message) {
+            if (this.status == "on") {
+                this.battery--;
+                this.typingMess.push(message);
+            }
+        }
+        this.reciveMess = function (message) {
+            if (this.status == "on") {
+                this.battery--;
+                this.arrivedMess.push(message);
+            }
+        }
+        this.sendMess = function (phone) {
+            if (this.status == "on") {
+                this.battery--;
+                phone.arrivedMess.push(this.typingMess);
+                this.sentMess.push(this.typingMess)
+            }
+        }
+        this.getArrivedMess = function () {
+            if (this.status == "on") {
+                this.battery--;
+                return this.arrivedMess;
+            }
+        }
+        this.getSentMess = function () {
+            if (this.status == "on") {
+                this.battery--;
+                return this.sentMess;
+            }
+        }
+    }
+    let iPhone = new mobileMold(65);
+    let Nokia = new mobileMold(88);
+    console.log(iPhone.getStatus());
+    console.log(iPhone.chargeMobile());
+    iPhone.typeMessage("hello world00");
+    console.log(iPhone.typingMess);
+    iPhone.sendMess(Nokia);
+    console.log(Nokia.getArrivedMess());
+    console.log(iPhone.getSentMess());
+    console.log(iPhone.battery);
+</script>
