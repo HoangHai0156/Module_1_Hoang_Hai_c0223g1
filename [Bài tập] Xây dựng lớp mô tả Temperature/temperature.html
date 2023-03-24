@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+<!-- + 273.15/9/5 * this.celsius + 32 -->
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let tempMold = function (celcius) {
+        this.celcius = celcius;
+        this.getFahrenheit = function () {
+            return celcius * 9 / 5 + 32;
+        }
+        this.getKevin = function () {
+            return celcius + 32;
+        }
+    }
+    let temperature = new tempMold(25);
+    document.write(`Fahrenheit is: ${temperature.getFahrenheit()}<br>`)
+    document.write(`Kevin is: ${temperature.getKevin()}`)
+</script>
