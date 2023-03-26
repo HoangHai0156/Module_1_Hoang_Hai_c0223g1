@@ -29,6 +29,7 @@
         this.chargeMobile = function () {
                 for (var i = this.battery; i < 100; i++) {
                     this.battery++;
+                    console.log(this.battery);
                 }
                 return this.battery;
         }
@@ -74,4 +75,5 @@
     console.log(Nokia.getArrivedMess());
     console.log(iPhone.getSentMess());
     console.log(iPhone.battery);
+    console.log(Nokia.chargeMobile());
 </script>
