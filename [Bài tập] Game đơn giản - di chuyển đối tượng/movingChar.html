@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Car</title>
+</head>
+<body onload="start()">
+    <div id="myCharacter">
+        
+    </div>
+</body>
+</html>
+<script>
+    let myChar = function(image,left,top,width,speed,frame){
+        this.topDefault = top;
+        this.leftDefault = left;
+        this.img = image;
+        this.left = left;
+        this.top = top;
+        this.width = width;
+        this.speed = speed;
+        this.frame = frame
+        this.getCharElement = function(){
+            return `<img src="${this.img}" alt="char" style="position: relative; top: ${this.top}px; left: ${this.left}px;" width="${this.width}px">`;
+        }
+        this.moveRight = function(){
+            this.left += this.speed;
+        }
+        this.moveLeft = function(){
+            this.left -= this.speed;
+        }
+        this.moveUp = function(){
+            this.top -= this.speed;
+        }
+        this.moveDown = function(){
+            this.top += this.speed;
+        }
+    }
+    let myUFO = new myChar("UFO.png",10,10,50,20,200);
+
+    function start(){
+        if(myUFO.left < innerWidth - myUFO.width && myUFO.top == myUFO.topDefault){
+            myUFO.moveRight();
+        }
+        document.getElementById("myCharacter").innerHTML = myUFO.getCharElement();
+        setTimeout(start,myUFO.frame);
+    }
+</script>
