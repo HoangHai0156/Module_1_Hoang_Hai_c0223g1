@@ -38,6 +38,7 @@ class catMold {
             if(rat.isAlive == true && this.countRat>0){
                 this.countRat--;
                 this.weight += rat.weight;
+                rat.isAlive = false;
             }
         }
     }
